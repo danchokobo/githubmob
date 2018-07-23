@@ -18,6 +18,8 @@ class Repo: Mappable {
     var stars: Int!
     var language: String?
     var forks: Int!
+    var webUrl: String?
+    
     required init?(map: Map){
         
     }
@@ -30,12 +32,13 @@ class Repo: Mappable {
         stars <- map["stargazers_count"]
         forks <- map["forks_count"]
         language <- map["language"]
+        webUrl <- map["html_url"]
     }
     
     
     
     static func fetchSalons(with topic: String, callback: @escaping (Repo?, String?) -> Void) {
-        var searchableTopic = topic.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+        let searchableTopic = topic.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
         
         Alamofire.request("\(Constants.server)repositories?q=\(searchableTopic)&sort=stars&order=desc")
             // 2
@@ -59,8 +62,6 @@ class Repo: Mappable {
                     }
                 }
                 
-                // 4
-                //                completion([Salon], nil)
         }
     }
     

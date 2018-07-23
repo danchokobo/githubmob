@@ -8,6 +8,7 @@ PODS:
   - Reusable/Storyboard (4.0.2)
   - Reusable/View (4.0.2)
   - Sugar (4.0.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.3)
   - Reusable
   - Sugar
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - ObjectMapper
     - Reusable
     - Sugar
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
   Sugar: afdf6d91da6112e7c3f12000bdddf1713237e0e6
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: fe27a6b10ca54eeb930c033a8c877f418c5be6b1
+PODFILE CHECKSUM: 0dd6561fd2dd824db0f75996174bb4b910794383
 
 COCOAPODS: 1.5.3

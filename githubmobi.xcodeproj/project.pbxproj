@@ -16,6 +16,7 @@
 		D86F31D02105DA4E00F23D72 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F31CF2105DA4E00F23D72 /* Repo.swift */; };
 		D86F31D22105DA6500F23D72 /* RepoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F31D12105DA6500F23D72 /* RepoCollectionViewCell.swift */; };
 		D86F31D42105DA7E00F23D72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F31D32105DA7E00F23D72 /* Constants.swift */; };
+		D86F31DA2105E47300F23D72 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86F31D92105E47300F23D72 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D86F31CF2105DA4E00F23D72 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		D86F31D12105DA6500F23D72 /* RepoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D86F31D32105DA7E00F23D72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D86F31D92105E47300F23D72 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				D86F31BD2105DA0600F23D72 /* AppDelegate.swift */,
 				D86F31BF2105DA0600F23D72 /* ViewController.swift */,
+				D86F31D92105E47300F23D72 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				"${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Sugar/Sugar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -217,6 +221,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPeasy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sugar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86F31D42105DA7E00F23D72 /* Constants.swift in Sources */,
+				D86F31DA2105E47300F23D72 /* WebViewController.swift in Sources */,
 				D86F31D22105DA6500F23D72 /* RepoCollectionViewCell.swift in Sources */,
 				D86F31D02105DA4E00F23D72 /* Repo.swift in Sources */,
 				D86F31C02105DA0600F23D72 /* ViewController.swift in Sources */,

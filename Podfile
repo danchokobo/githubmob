@@ -11,4 +11,5 @@ target 'githubmobi' do
   pod 'Sugar'
   pod 'Reusable'
   pod 'ObjectMapper', '~> 3.3'
+  pod 'SVProgressHUD'
 end
