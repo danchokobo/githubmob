@@ -37,7 +37,7 @@ class Repo: Mappable {
     
     
     
-    static func fetchSalons(with topic: String, callback: @escaping (Repo?, String?) -> Void) {
+    static func fetchRepos(with topic: String, callback: @escaping (Repo?, String?) -> Void) {
         let searchableTopic = topic.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
         
         Alamofire.request("\(Constants.server)repositories?q=\(searchableTopic)&sort=stars&order=desc")

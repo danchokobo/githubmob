@@ -8,6 +8,7 @@
 
 import UIKit
 import EasyPeasy
+import SVProgressHUD
 
 class ViewController: UIViewController {
     
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: view.bounds.width - 20, height: 130)
         return layout
     }()
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchSalons()
+        fetchRepos(topic: "face recognition")
         configureSearchController()
         configureViews()
         configureContraints()
@@ -61,15 +63,15 @@ class ViewController: UIViewController {
     }
     
     func configureSearchController() {
-        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = true
         searchController.searchBar.placeholder = "Search repos"
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
     func configureViews() {
         view.backgroundColor = .white
-        title = "Github repos"
+        title = "Github popular repos"
         view.addSubview(collectionView)
     }
     
@@ -77,14 +79,15 @@ class ViewController: UIViewController {
         collectionView.easy.layout(Edges(0))
     }
     
-    func fetchSalons() {
-        let topic = "face recognition"
-        
-        Repo.fetchSalons(with: topic) { (repo, error) in
+    func fetchRepos(topic: String) {
+        self.repos.removeAll()
+        SVProgressHUD.show(withStatus: "Please, wait...")
+        Repo.fetchRepos(with: topic) { (repo, error) in
             if(error != nil){
-                print("error")
+                SVProgressHUD.showError(withStatus: error)
             }else{
                 self.repos.append(repo!)
+                SVProgressHUD.dismiss()
             }
         }
         
@@ -113,8 +116,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 
-extension ViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        // TODO
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        fetchRepos(topic: searchBar.text!)
+        searchController.isActive = false
+        
     }
 }
+
