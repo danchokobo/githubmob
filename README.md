@@ -12,9 +12,11 @@ You can find popular repositories. Repositories sorted by stars. By clicking one
 <img src="/screenshots/screenshot.png?raw=true" width="30%"> <img src="/screenshots/screen2.png?raw=true" width="30%">
 
 ## Instalation
-`$ git clone https://github.com/danchokobo/githubmob.git`
-`$ cd githubmob`
-`$ cd pod install`
+```bash
+$ git clone https://github.com/danchokobo/githubmob.git
+$ cd githubmob
+$ cd pod install
+```
 
 ## Credentials
 [Danagul Otel](https://github.com/danchokobo),
