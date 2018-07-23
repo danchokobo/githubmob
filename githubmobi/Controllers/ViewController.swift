@@ -11,13 +11,15 @@ import EasyPeasy
 
 class ViewController: UIViewController {
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     var repos = [Repo]() {
         didSet {
             collectionView.reloadData()
         }
     }
     
-    fileprivate lazy var layout: UICollectionViewFlowLayout = {
+    lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10
@@ -38,12 +40,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchSalons()
+        configureSearchController()
         configureViews()
         configureContraints()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if #available(iOS 11.0, *) {
+            navigationItem.hidesSearchBarWhenScrolling = false
+        }
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if #available(iOS 11.0, *) {
+            navigationItem.hidesSearchBarWhenScrolling = true
+        }
+    }
+    
+    func configureSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.searchBar.placeholder = "Search repos"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
     func configureViews() {
         view.backgroundColor = .white
         title = "Github repos"
@@ -87,5 +110,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return repos.count
+    }
+}
+
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
     }
 }
