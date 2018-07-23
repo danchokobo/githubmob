@@ -32,9 +32,9 @@ class WebViewController: UIViewController {
     func loadWebViewByUrl() {
         let url = URL(string: repoUrl)!
         webView.loadRequest(URLRequest(url: url))
-        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
-        toolbarItems = [refresh]
-        navigationController?.isToolbarHidden = false
+//        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+//        toolbarItems = [refresh]
+//        navigationController?.isToolbarHidden = false
     }
     
 }
