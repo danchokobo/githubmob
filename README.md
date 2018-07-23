@@ -11,7 +11,7 @@ You can find popular repositories. Repositories sorted by stars. By clicking one
 ## Screenshots
 <img src="/screenshots/screenshot.png?raw=true" width="30%"> <img src="/screenshots/screen2.png?raw=true" width="30%">
 
-## Instalation
+## Getting started
 ```bash
 $ git clone https://github.com/danchokobo/githubmob.git
 $ cd githubmob
