@@ -1,8 +1,6 @@
 
 # Githubmob - mobile version of Github
-You can find popular repositories
-Repositories sorted by stars
-By clicking one of them, you can see short description abour repo
+You can find popular repositories.Repositories sorted by stars. By clicking one of them, you can see short description abour repo
 # Used libraries
 * [Easy Peasy](https://github.com/nakiostudio/EasyPeasy) - Auto Layout made easy
 * [Sugar](https://github.com/hyperoslo/Sugar) - Something sweet that goes great with your Cocoa 
