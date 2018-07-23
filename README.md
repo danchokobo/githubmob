@@ -2,8 +2,8 @@
 # Githubmob - mobile version of Github
 You can find popular repositories
 ## Screenshots
-<img src="/screenshots/screen2.png?raw=true" width="30%">
-<img src="/screenshots/screenshot.png?raw=true" width="30%">
+<img src="/screenshot/screen2.png?raw=true" width="30%">
+<img src="/screenshot/screenshot.png?raw=true" width="30%">
 
 ## Credentials
 [Danagul Otel](https://github.com/danchokobo),
