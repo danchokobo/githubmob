@@ -29,6 +29,7 @@ class Repo: Mappable {
         description <- map["description"]
         stars <- map["stargazers_count"]
         forks <- map["forks_count"]
+        language <- map["language"]
     }
     
     

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
-        layout.itemSize = CGSize(width: view.bounds.width - 40, height: 150)
+        layout.itemSize = CGSize(width: view.bounds.width - 20, height: 130)
         return layout
     }()
     
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = UIColor.clear
-        collectionView.register(RepoCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "salonCell")
+        collectionView.register(RepoCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "repoCell")
         return collectionView
     }()
     
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     func configureContraints() {
-        collectionView.easy.layout([Edges(5)])
+        collectionView.easy.layout(Edges(0))
     }
     
     func fetchSalons() {
@@ -74,10 +74,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "salonCell", for: indexPath) as! RepoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "repoCell", for: indexPath) as! RepoCollectionViewCell
         let repo = repos[indexPath.row]
         cell.repoNameLabel.text = repo.name
-        cell.starsLabel.text = String(repo.stars)
+        cell.starsLabel.text = "★\(repo.stars ?? 0)"
         cell.descriptionLabel.text = repo.description
         cell.languageLabel.text = repo.language
         return cell

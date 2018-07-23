@@ -84,17 +84,49 @@
 		D86F31BC2105DA0600F23D72 /* githubmobi */ = {
 			isa = PBXGroup;
 			children = (
-				D86F31BD2105DA0600F23D72 /* AppDelegate.swift */,
-				D86F31BF2105DA0600F23D72 /* ViewController.swift */,
+				D86F31D52105DCF200F23D72 /* Controllers */,
 				D86F31C12105DA0600F23D72 /* Main.storyboard */,
 				D86F31C42105DA0600F23D72 /* Assets.xcassets */,
 				D86F31C62105DA0600F23D72 /* LaunchScreen.storyboard */,
 				D86F31C92105DA0600F23D72 /* Info.plist */,
-				D86F31CF2105DA4E00F23D72 /* Repo.swift */,
-				D86F31D12105DA6500F23D72 /* RepoCollectionViewCell.swift */,
-				D86F31D32105DA7E00F23D72 /* Constants.swift */,
+				D86F31D62105DCFA00F23D72 /* Models */,
+				D86F31D82105DD0800F23D72 /* Views */,
+				D86F31D72105DD0000F23D72 /* Helpers */,
 			);
 			path = githubmobi;
+			sourceTree = "<group>";
+		};
+		D86F31D52105DCF200F23D72 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D86F31BD2105DA0600F23D72 /* AppDelegate.swift */,
+				D86F31BF2105DA0600F23D72 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D86F31D62105DCFA00F23D72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D86F31CF2105DA4E00F23D72 /* Repo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D86F31D72105DD0000F23D72 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D86F31D32105DA7E00F23D72 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D86F31D82105DD0800F23D72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D86F31D12105DA6500F23D72 /* RepoCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
