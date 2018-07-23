@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.7.2)
+  - EasyPeasy (1.7.0)
+  - ObjectMapper (3.3.0)
+  - Reusable (4.0.2):
+    - Reusable/Storyboard (= 4.0.2)
+    - Reusable/View (= 4.0.2)
+  - Reusable/Storyboard (4.0.2)
+  - Reusable/View (4.0.2)
+  - Sugar (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - EasyPeasy
+  - ObjectMapper (~> 3.3)
+  - Reusable
+  - Sugar
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - EasyPeasy
+    - ObjectMapper
+    - Reusable
+    - Sugar
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  EasyPeasy: 2f2785ed78c6f9e9045221f2ff317730e7321bff
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
+  Sugar: afdf6d91da6112e7c3f12000bdddf1713237e0e6
+
+PODFILE CHECKSUM: fe27a6b10ca54eeb930c033a8c877f418c5be6b1
+
+COCOAPODS: 1.5.3
