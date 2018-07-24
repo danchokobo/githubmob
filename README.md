@@ -15,7 +15,7 @@ You can find popular repositories. Repositories sorted by stars. By clicking one
 ```bash
 $ git clone https://github.com/danchokobo/githubmob.git
 $ cd githubmob
-$ cd pod install
+$ pod install
 ```
 
 ## Credentials
